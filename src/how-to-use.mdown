@@ -1,0 +1,7 @@
+# How to use this Resume
+
+* Press `h` to toggle display of help
+* Press `right arrow`, or `space` to navigate to next slide
+* Press `left arrow` to navigate to previous slide
+* Press `t` to toggle display of table of contents
+* Press `ESC` to display the presentation overview (Exposé)

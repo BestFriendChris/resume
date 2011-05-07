@@ -1,0 +1,122 @@
+# About Chris
+
+---
+
+## Contact information
+.fx: contact
+
+* E-Mail: <j.chris.turner@gmail.com>
+* Twitter: [@BestFriendChris][twitter]
+* Mobile Phone: (319) 210-8096
+
+[twitter]: http://twitter.com/BestFriendChris
+
+---
+
+## Summary
+
+???
+
+
+---
+
+## Language Experience
+
+> I believe that the more types of programming languages you know, the more tools you
+> have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
+> profound impact on how I write code in any language. Clearly I'm a language nerd.
+
+### Specific experience:
+
+* [Java][] _(6 years professional experience, 10+ years total)_
+* [Javascript][js] _(4 years professional experience)_
+* [Ruby][rb] _(10+ years experience)_
+    * Primarily used in small server scripts
+    * Haven't used it much lately, but picking it back up should be trivial
+* [Clojure][clj] _(2 years experience)_
+    * Mostly on small, personal projects
+* [bash][]/[zsh][] scripting _(7+ years experience)_
+* [Scheme][], [Haskell][], [C#][], [Objective-C][], [Scala][]
+    * Light, but workable knowledge of all of these
+
+[java]: ???
+[js]: ???
+[rb]: ???
+[clj]: http://clojure.org
+[bash]: ???
+[zsh]: ???
+[Scheme]: ???
+[Haskell]: ???
+[C#]: ???
+[Objective-C]: ???
+[Scala]: ???
+
+---
+
+## Tech Experience - Testing
+
+> Automated testing is an important part of any software project. By working closely
+> with the QAs on the various teams I've been a part of, I have a strong understanding
+> of the ???
+
+### Specific experience:
+
+* [Fit][]/[Twist][] _(5 years professional experience)_
+    * ThoughtWorks [Twist][] product is largely inspired from [Fit][]
+* [Selenium][sel]/[WebDriver][wd]/[Sahi][sahi] _(5 years professional experience)_
+* [JUnit][junit] _(6 years professional experience)_
+
+[fit]: ???
+[twist]: http://www.thoughtworks-studios.com/twist
+[sel]: ???
+[wd]: ???
+[sahi]: ???
+[junit]: ???
+
+---
+
+## Tech Experience - Build/Deploy
+
+> On all software development projects I've been involved with, I've been the "build guy".
+> I love working to improve the process of building and deploying software on the team
+> to keep the build time down, receiving the fastest feedback possible of a broken build, and
+> ensuring everybody on the team can use the build script effectively and easily.
+
+> Most recently I've gotten interested in the DevOps movement. I like the bridging of
+> my developer background with my (light) operations background. I've worked closely with
+> Jez Humble (one of the authors of [Continuous Delivery][cdbook]) for the better part
+> of 4 years.
+
+### Specific experience:
+
+* [Ant][ant] _(6 years professional experience)_
+* [Rake][rake] _(2 years professional experience)_
+* [Buildr][buildr] _(1 year professional experience)_
+* [Chef][chef] _(2 years light experience)_
+    * Mostly played around with this in my free time
+
+[cdbook]: ???
+[ant]: ???
+[rake]: ???
+[buildr]: ???
+[chef]: ???
+
+---
+
+## Tech Experience - Version Control
+
+> I've been using version control systems for more than 7 years. I started using
+> [Subversion][svn], but lately have been using DVCS almost exclusively. Professionally
+> we've been using mostly [Mercurial][hg], while for my personal projects I've been
+> using primarily [Git][].
+
+### Specific experience:
+
+* [Git][] _(4 years experience)_
+* [Mercurial][hg] _(4 years professional experience)_
+* [Subversion][svn] _(4 years professional experience)_
+    * Haven't used in several years
+
+[git]: ???
+[hg]: ???
+[svn]: ???

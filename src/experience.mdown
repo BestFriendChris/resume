@@ -1,0 +1,94 @@
+# Work Experience
+
+---
+
+## Networking Solutions
+
+.fx: experience
+
+_June 2005 - Feb 2006_
+
+**Network Technician**
+
+### About [Networking Solutions][netsol]
+
+Small organization primarily focused on being the IT organization for many smaller
+companies in the NE Iowa area.
+
+### Responsibilities included:
+
+* Software installation/maintenance on both server and desktop machines
+* Cisco router configuration
+* Wireless access point configuration and installation
+
+[netsol]: http://www.networkingiowa.com
+
+---
+
+## Thoughtworks
+
+.fx: experience
+
+_Feb 2006 - Jul 2007_
+
+**Software Development Consultant**
+
+### About [Thoughtworks][tw]
+
+???
+
+### Responsibilities included
+
+* In addition to my development responsibilities, helped out with both automated testing
+  and deployment into production.
+* Worked on 2 client projects
+    1. Back-end system that parsed and processed a massive data set and inserted inserted
+       it into a database
+    2. Team lead of a component in a large medical record system.
+
+[tw]: http://www.thoughtworks.com
+
+---
+
+## Thoughtworks Studios
+
+.fx: experience
+
+_Aug 2007 - Mar 2010_
+
+**Senior Developer - [Go Continuous Delivery Server][go]**
+
+### About [Thoughtworks Studios][tw-studios]
+
+???
+
+### Responsibilities included
+
+* Helped define the course of the product
+* For 9 months, worked distributed with a [ThoughtWorks][tw-studios] team in Beijing
+* Introduced the DVCS [Mercurial][hg] to the team
+
+[tw-studios]: http://www.thoughtworks-studios.com
+[go]: http://www.thoughtworks-studios.com/go
+[hg]: ???
+
+---
+
+## Thoughtworks Studios
+
+.fx: experience
+
+_Apr 2010 - Present_
+
+**Agile Trainer and Coach**
+
+### Responsibilities include
+
+* Helped define the technical practices training program
+* Delivered training material and coaching covering 
+    * Continuous Integration/Delivery best practices (using [Go][])
+    * Automated Testing best practices (using [Twist][])
+    * General Agile Engineering Practices
+
+[twist]: http://www.thoughtworks-studios.com/twist
+[go]: http://www.thoughtworks-studios.com/go
