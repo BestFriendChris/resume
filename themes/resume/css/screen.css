@@ -39,7 +39,7 @@ div.slide {
   width: 900px;
   height: 700px;
   margin-top: -350px;
-  margin-left: -400px;
+  margin-left: -450px;
   left: 50%;
   top: 50%;
   background: -webkit-gradient(linear, left bottom, left top, from(#bbd), to(#fff));
@@ -232,27 +232,28 @@ div.slide p {
 
 .slide.far-past {
   display: block;
-  margin-left: -2400px;
+  margin-top: -2150px;
 }
 
 .slide.past {
   display: block;
-  margin-left: -1400px;
+  margin-top: -1075px;
 }
 
 .slide.current {
   display: block;
   margin-left: -450px;
+  margin-top: -350px;
 }
 
 .slide.future {
   display: block;
-  margin-left: 500px;
+  margin-top: 375px;
 }
 
 .slide.far-future {
   display: block;
-  margin-left: 1500px;
+  margin-top: 1000px;
 }
 
 body.three-d div.slides {

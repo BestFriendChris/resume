@@ -291,9 +291,11 @@ function main() {
         toggleOverview();
         break;
       case 37: // left arrow
+      case 38: // up arrow
         prevSlide();
         break;
       case 39: // right arrow
+      case 40: // down arrow
       case 32: // space
         nextSlide();
         break;
