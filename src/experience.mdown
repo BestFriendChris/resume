@@ -70,7 +70,7 @@ _Aug 2007 - Mar 2010_
 
 [tw-studios]: http://www.thoughtworks-studios.com
 [go]: http://www.thoughtworks-studios.com/go
-[hg]: ???
+[hg]: http://mercurial.selenic.com/
 
 ---
 

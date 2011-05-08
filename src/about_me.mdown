@@ -28,28 +28,16 @@
 
 ### Specific experience:
 
-* [Java][] _(6 years professional experience, 10+ years total)_
-* [Javascript][js] _(4 years professional experience)_
-* [Ruby][rb] _(10+ years experience)_
+* Java _(6 years professional experience, 10+ years total)_
+* Javascript _(4 years professional experience)_
+* Ruby _(10+ years experience)_
     * Primarily used in small server scripts
     * Haven't used it much lately, but picking it back up should be trivial
-* [Clojure][clj] _(2 years experience)_
+* Clojure _(2 years experience)_
     * Mostly on small, personal projects
-* [bash][]/[zsh][] scripting _(7+ years experience)_
-* [Scheme][], [Haskell][], [C#][], [Objective-C][], [Scala][]
+* bash/zsh scripting _(7+ years experience)_
+* Scheme, Haskell, C#, Objective-C, Scala
     * Light, but workable knowledge of all of these
-
-[java]: ???
-[js]: ???
-[rb]: ???
-[clj]: http://clojure.org
-[bash]: ???
-[zsh]: ???
-[Scheme]: ???
-[Haskell]: ???
-[C#]: ???
-[Objective-C]: ???
-[Scala]: ???
 
 ---
 
@@ -64,14 +52,15 @@
 * [Fit][]/[Twist][] _(5 years professional experience)_
     * ThoughtWorks [Twist][] product is largely inspired from [Fit][]
 * [Selenium][sel]/[WebDriver][wd]/[Sahi][sahi] _(5 years professional experience)_
+    * [WebDriver][wd] has been integrated into the latest version of [Selenium][sel]
 * [JUnit][junit] _(6 years professional experience)_
 
-[fit]: ???
+[fit]: http://fit.c2.com/
 [twist]: http://www.thoughtworks-studios.com/twist
-[sel]: ???
-[wd]: ???
-[sahi]: ???
-[junit]: ???
+[sel]: http://seleniumhq.org/
+[wd]: http://webdriver.googlecode.com/
+[sahi]: http://sahi.co.in/w/
+[junit]: http://www.junit.org/
 
 ---
 
@@ -95,11 +84,11 @@
 * [Chef][chef] _(2 years light experience)_
     * Mostly played around with this in my free time
 
-[cdbook]: ???
-[ant]: ???
-[rake]: ???
-[buildr]: ???
-[chef]: ???
+[cdbook]: http://continuousdelivery.com/
+[ant]: http://ant.apache.org/
+[rake]: http://rake.rubyforge.org/
+[buildr]: http://buildr.apache.org/
+[chef]: http://www.opscode.com/chef/
 
 ---
 
@@ -117,6 +106,6 @@
 * [Subversion][svn] _(4 years professional experience)_
     * Haven't used in several years
 
-[git]: ???
-[hg]: ???
-[svn]: ???
+[git]: http://git-scm.com/
+[hg]: http://mercurial.selenic.com/
+[svn]: http://subversion.tigris.org/
