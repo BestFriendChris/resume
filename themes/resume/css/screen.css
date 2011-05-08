@@ -1,3 +1,15 @@
+#forkme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 2;
+}
+
+body.expose #forkme, body.presenter_view #forkme {
+	display: none;
+}
+
 body {
   font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   background: #778;
