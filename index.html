@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Résumé</title>
+    <!-- Styles -->
+    
+    <style type="text/css" media="print">
+      * {
+    margin: 0;
+    padding: 0;
+}
+@page {
+    size: landscape;
+}
+body {
+    font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+div.slide {
+    min-width: 800px;
+    min-height: 600px;
+    padding: 1em;
+    overflow: hidden;
+    page-break-after: always;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+div.slide div.inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    display: table-cell;
+}
+h1 {
+    font-size: 2.4em;
+}
+h2 {
+    font-size: 1.4em;
+}
+h3 {
+    margin: 1em 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+p, li, pre {
+    margin: 1em 0;
+}
+li {
+    margin-left: 2em;
+}
+a {
+    color: #000000;
+}
+pre, code {
+    max-width: 800px;
+    background: #eee;
+    font-family: Monaco, monospace;
+    font-size: 90%;
+}
+pre {
+    padding: .2em .5em;
+    overflow: hidden;
+    border-radius: .8em;
+}
+code {
+    padding: 0 .2em;
+}
+.slide header:only-child h1 {
+  line-height: 180%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  height: 600px;
+  width: 800px;
+  font-size: 48px;
+  margin-top:100px;
+  margin-bottom:100px;
+}
+#toc, #help, .slide aside, .slide footer, .slide .notes {
+  display: none;
+}
+
+    </style>
+    <style type="text/css" media="screen, projection">
+      /*
+Color scheme:
+http://www.colorcombos.com/color-scheme-185.html
+
+#E9DCB9 - Light tan
+#BB772E - Copper
+#817D62 - Grey
+#2E3F53 - Blue
+*/
+
+#forkme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 2;
+}
+
+body.expose #forkme, body.presenter_view #forkme {
+  display: none;
+}
+
+body {
+  font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  background-color: #BB772E;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+div.presentation {
+  position: absolute;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  background: inherit;
+}
+
+div.presentation > h1 {
+  display: none;
+}
+
+div.slides {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+}
+
+div.slide {
+  display: inline;
+  position: absolute;
+  overflow: hidden;
+  width: 900px;
+  height: 700px;
+  margin-top: -350px;
+  margin-left: -450px;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: margin 0.25s ease-in-out;
+  -moz-transition: margin 0.25s ease-in-out;
+  -o-transition: margin 0.25s ease-in-out;
+  border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  background-color: #E9DCB9;
+}
+
+div#current_presenter_notes {
+  display: none;
+}
+
+div.slide div.presenter_notes {
+  display: none;
+}
+
+/* @group Expose */
+
+body.expose div.slides {
+  float: left;
+  position: relative;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+body.expose div.slide {
+  display: block;
+  float: left;
+  position: relative;
+  left: auto !important;
+  top: auto !important;
+  margin: 10px !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;  
+  -moz-transform: scale(.33, .33);
+  -moz-transform-origin: 0 0;
+  -webkit-transform: scale(.33, .33);
+  -webkit-transform-origin: 0 0;
+  -o-transform: scale(.33, .33);
+  -o-transform-origin: 0 0;
+  cursor: pointer;
+}
+
+body.expose div.slide:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#E9DCB9), to(#fff));
+  background-color: #E9DCB9;
+  background: -moz-linear-gradient(bottom, #E9DCB9, #fff);
+}
+
+body.expose .slide-wrapper {
+  float: left;
+  position: relative;
+  margin: .5%;
+  width: 300px;
+  height: 233px;
+}
+
+body.expose .slide footer {
+}
+
+body.expose .slide .inner {
+}
+
+body.expose .slide.far-past,
+body.expose .slide.past,
+body.expose .slide.future,
+body.expose .slide.far-future {
+  margin-left: 0;
+}
+
+body.expose .slide.current {
+  background: -webkit-gradient(linear, left bottom, left top, from(#E9DCB9), to(#fff));
+  background-color: #E9DCB9;
+  background: -moz-linear-gradient(bottom, #E9DCB9, #fff);
+  border: 5px solid #2E3F53;
+}
+
+/* @end */
+
+/* @group Presenter View */
+
+body.presenter_view div.slide {
+  display: inline;
+  position: absolute;
+  overflow: hidden;
+  -moz-transform: scale(.5, .5);
+  -moz-transform-origin: 0 0;
+  -webkit-transform: scale(.5, .5);
+  -webkit-transform-origin: 0 0;
+  -o-transform: scale(.5, .5);
+  -o-transform-origin: 0 0;
+  margin-top: -300px;
+}
+
+body.presenter_view .slide.far-past {
+  display: block;
+  margin-left: -1500px;
+}
+
+body.presenter_view .slide.past {
+  display: block;
+  margin-left: -975px;
+}
+
+body.presenter_view .slide.current {
+  display: block;
+  margin-left: -475px;
+  border: 5px solid #2E3F53;
+  z-index: 2;
+}
+
+body.presenter_view .slide.future {
+  display: block;
+  margin-left: 25px;
+  z-index: 1;
+}
+
+body.presenter_view .slide.far-future {
+  display: block;
+  margin-left: 525px;
+}
+
+body.presenter_view div#current_presenter_notes {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  overflow: auto;
+  vertical-align: middle;
+  left: 50%;
+  top: 50%;
+  margin-left: -475px;
+  margin-top: 100px;
+  z-index: 2;
+  width: 950px;
+  border-style: solid;
+  height: 30%;
+  background-color: #817D62;
+}
+
+body.presenter_view #current_presenter_notes header {
+  font-size: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  padding-left: 10px;
+}
+
+body.presenter_view div#current_presenter_notes section {
+  font-family: 'Lucida Grande';
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  display: block;
+  overflow: visible;
+  position: relative;
+  background-color: #fffeff;
+  height: 120px;
+  margin-right: 30px;
+  margin-top: 60px;
+  margin-left: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+body.presenter_view div#current_presenter_notes section p {
+  margin: 0;
+}
+
+body.presenter_view div#current_presenter_notes h1 {
+  font-size: 50%;
+  display: block;
+}
+
+/* @end */
+
+/* @group Slide Styles */
+
+div.slide p {
+  font-size: 20px;
+}
+
+.slide.far-past {
+  display: block;
+  margin-top: -2150px;
+}
+
+.slide.past {
+  display: block;
+  margin-top: -1075px;
+}
+
+.slide.current {
+  display: block;
+  margin-left: -450px;
+  margin-top: -350px;
+}
+
+.slide.future {
+  display: block;
+  margin-top: 375px;
+}
+
+.slide.far-future {
+  display: block;
+  margin-top: 1000px;
+}
+
+body.three-d div.slides {
+  -webkit-transform: translateX(50px) scale(0.8) rotateY(10deg);
+  -moz-transform: translateX(50px) scale(0.8) rotateY(10deg);
+  -o-transform: translateX(50px) scale(0.8) rotateY(10deg);
+}
+
+/* @end */
+
+/* @group Content */
+
+.slide header:not(:only-child) {
+  font-family: 'Lucida Grande';
+  font-weight: normal;
+  font-size: 50px;
+  letter-spacing: -.05em;
+  color: black;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  top: 0;
+  background-color: #2E3F53;
+  width: 840px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  padding: 15px 30px;
+}
+
+.slide header {
+  position: relative;
+  display: block;
+    -webkit-transition: margin 0.25s ease-in-out;
+  -moz-transition: margin 0.25s ease-in-out;
+  -o-transition: margin 0.25s ease-in-out;
+}
+
+.slide header h1, .slide header h2, .slide header h3, .slide header h4, .slide header h5, .slide header h6 {
+  color: #E9DCB9;
+  display: inline;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.slide header h2:first-child {
+  margin-top: 0;
+}
+
+.slide section, .slide header:only-child h1, .slide header:only-child h2 {
+  font-family: 'Lucida Grande';
+  color: #3f3f3f;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  display: block;
+  overflow: hidden;
+  
+}
+
+.slide a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 110%;
+  border: 1px inset #2E3F53;
+  padding-left: .5ex;
+  padding-right: .5ex;
+}
+
+.slide a:hover {
+  background-color: #2E3F53;
+  color: #E9DCB9;
+}
+
+.slide code {
+  background-color: #2E3F53;
+  color: #E9DCB9;
+  padding-left: .5ex;
+  padding-right: .5ex;
+  font-family: Courier, mono;
+}
+
+.slide pre {
+  font-size: 16px;
+  font-family: Monaco, Courier, monospace;
+}
+
+.slide li {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.slide header:only-child h1 {
+  line-height: 180%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  height: 700px;
+  width: 900px;
+  font-size: 50px;
+  margin-top:100px;
+  margin-bottom:100px;
+}
+
+.sidebar {
+  clear: both;
+  background: -webkit-gradient(linear, top right, bottom right, from(#BB772E), to(#fff));
+  -webkit-transition: margin 0.25s ease-in-out;
+  background-color: #BB772E;
+  background: -moz-linear-gradient(right, #BB772E, #fff);
+  border-right: 5px solid #2E3F53;
+  z-index: 9999999;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  position: absolute;
+  display: block;
+  margin: 0;
+  margin-left: -400px;
+  overflow: auto;
+  -webkit-transition: margin 0.2s ease-in-out;
+  -moz-transition: margin 0.2s ease-in-out;
+  -o-transition: margin 0.2s ease-in-out;
+}
+
+.sidebar h2 {
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+  padding: 16px 0;
+  text-align: center;
+  margin: 0 16px 0 0;
+  background-color: #2E3F53;
+  width: 100%;
+  left: 0;
+  display: block;
+  color: #E9DCB9;
+  border-bottom: 1px solid #BB772E;
+}
+
+.sidebar table {
+  padding: 0;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.sidebar table caption {
+  display: none;
+}
+
+.sidebar tr {
+  margin: 2px 10px;
+  border-bottom: 1px solid #2E3F53;
+}
+
+.sidebar th {
+  text-align: left;
+  font-weight: normal;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.sidebar tr.sub th {
+  text-indent: 20px;
+}
+
+.sidebar td {
+  text-align: right;
+  min-width: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  border-bottom: none;
+  color: #E9DCB9;
+}
+
+.sidebar td {
+  display: block;
+  padding: 4px 15px;
+  color: #E9DCB9;
+}
+
+.sidebar th {
+  padding: 4px 15px;
+  color: #E9DCB9;
+}
+
+.sidebar tr.active {
+  background: #2E3F53;
+}
+
+aside {
+  display: none;
+}
+  aside.source {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    text-indent: 10px;
+  }
+  aside.page_number {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    text-indent: 10px;
+  }
+
+.notes {
+  display: none;
+  padding: 10px;
+  background: #ccc;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+  div.slide p.notes {
+    font-size: 90%;
+}
+
+/* @end */
+
+/* @group Pygment */
+
+/* Pygments default theme */
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* @end */
+
+    </style>
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script>
+      function main() {
+  // Since we don't have the fallback of attachEvent and
+  // other IE only stuff we won't try to run JS for IE.
+  // It will run though when using Google Chrome Frame
+  if (document.all) { return; }
+
+  var currentSlideNo;
+  var notesOn = false;
+  var slides = document.getElementsByClassName('slide');
+  var touchStartX = 0;
+  var spaces = /\s+/, a1 = [""];
+  var tocOpened = false;
+  var helpOpened = false;
+  var overviewActive = false;
+  var showingPresenterView = false;
+  var presenterViewWin = null;
+  var isPresenterView = false;
+
+  var str2array = function(s) {
+    if (typeof s == "string" || s instanceof String) {
+      if (s.indexOf(" ") < 0) {
+        a1[0] = s;
+        return a1;
+      } else {
+        return s.split(spaces);
+      }
+    }
+    return s;
+  };
+
+  var trim = function(str) {
+    return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+  };
+
+  var addClass = function(node, classStr) {
+    classStr = str2array(classStr);
+    var cls = " " + node.className + " ";
+    for (var i = 0, len = classStr.length, c; i < len; ++i) {
+      c = classStr[i];
+      if (c && cls.indexOf(" " + c + " ") < 0) {
+        cls += c + " ";
+      }
+    }
+    node.className = trim(cls);
+  };
+
+  var removeClass = function(node, classStr) {
+    var cls;
+    if (classStr !== undefined) {
+      classStr = str2array(classStr);
+      cls = " " + node.className + " ";
+      for (var i = 0, len = classStr.length; i < len; ++i) {
+        cls = cls.replace(" " + classStr[i] + " ", " ");
+      }
+      cls = trim(cls);
+    } else {
+      cls = "";
+    }
+    if (node.className != cls) {
+      node.className = cls;
+    }
+  };
+
+  var getSlideEl = function(slideNo) {
+    if (slideNo > 0) {
+      return slides[slideNo - 1];
+    } else {
+      return null;
+    }
+  };
+
+  var getSlideTitle = function(slideNo) {
+    var el = getSlideEl(slideNo);
+    if (el) {
+      var headers = el.getElementsByTagName('header');
+      if (headers.length > 0) {
+        return el.getElementsByTagName('header')[0].innerText;
+      }
+    }
+    return null;
+  };
+
+  var getSlidePresenterNote = function(slideNo) {
+    var el = getSlideEl(slideNo);
+    if (el) {
+      var n = el.getElementsByClassName('presenter_notes');
+      if (n.length > 0) {
+        return n[0];
+      }
+    }
+    return null;
+  };
+
+  var changeSlideElClass = function(slideNo, className) {
+    var el = getSlideEl(slideNo);
+    if (el) {
+      removeClass(el, 'far-past past current future far-future');
+      addClass(el, className);
+    }
+  };
+
+  var updateSlideClasses = function(updateOther) {
+    window.location.hash = (isPresenterView ? "presenter" : "slide") + currentSlideNo;
+
+    for (var i=1; i<currentSlideNo-1; i++) {
+      changeSlideElClass(i, 'far-past');
+    }
+
+    changeSlideElClass(currentSlideNo - 1, 'past');
+    changeSlideElClass(currentSlideNo, 'current');
+    changeSlideElClass(currentSlideNo + 1, 'future');
+
+    for (i=currentSlideNo+2; i<slides.length+1; i++) {
+      changeSlideElClass(i, 'far-future');
+    }
+
+    highlightCurrentTocLink();
+
+    document.getElementsByTagName('title')[0].innerText = getSlideTitle(currentSlideNo);
+
+    updatePresenterNotes();
+
+    if (updateOther) { updateOtherPage(); }
+  };
+
+  var updatePresenterNotes = function() {
+    if (!isPresenterView) { return; }
+
+    var existingNote = document.getElementById('current_presenter_notes');
+    var currentNote = getSlidePresenterNote(currentSlideNo).cloneNode(true);
+    currentNote.setAttribute('id', 'presenter_note');
+
+    existingNote.replaceChild(currentNote, document.getElementById('presenter_note'));
+  };
+
+  var highlightCurrentTocLink = function() {
+    var toc = document.getElementById('toc');
+
+    if (toc) {
+      var tocRows = toc.getElementsByTagName('tr');
+      for (var i=0; i<tocRows.length; i++) {
+        removeClass(tocRows.item(i), 'active');
+      }
+
+      var currentTocRow = document.getElementById('toc-row-' + currentSlideNo);
+      if (currentTocRow) {
+        addClass(currentTocRow, 'active');
+      }
+    }
+  };
+
+  var updateOtherPage = function() {
+    if (!showingPresenterView) { return; }
+
+    var w = isPresenterView ? window.opener : presenterViewWin;
+    w.postMessage('slide#' + currentSlideNo, '*');
+  }
+
+  var nextSlide = function() {
+    if (currentSlideNo < slides.length) {
+      currentSlideNo++;
+    }
+    updateSlideClasses(true);
+  };
+
+  var prevSlide = function() {
+    if (currentSlideNo > 1) {
+      currentSlideNo--;
+    }
+    updateSlideClasses(true);
+  };
+
+  var showNotes = function() {
+    var notes = getSlideEl(currentSlideNo).getElementsByClassName('notes');
+    for (var i = 0, len = notes.length; i < len; i++) {
+      notes.item(i).style.display = (notesOn) ? 'none':'block';
+    }
+    notesOn = (notesOn) ? false : true;
+  };
+
+  var showSlideNumbers = function() {
+    var asides = document.getElementsByClassName('page_number');
+    var hidden = asides[0].style.display != 'block';
+    for (var i = 0; i < asides.length; i++) {
+      asides.item(i).style.display = hidden ? 'block' : 'none';
+    }
+  };
+
+  var showSlideSources = function() {
+    var asides = document.getElementsByClassName('source');
+    var hidden = asides[0].style.display != 'block';
+    for (var i = 0; i < asides.length; i++) {
+      asides.item(i).style.display = hidden ? 'block' : 'none';
+    }
+  };
+
+  var showToc = function() {
+    if (helpOpened) {
+        showHelp();
+    }
+
+    var toc = document.getElementById('toc');
+
+    if (toc) {
+      toc.style.marginLeft = tocOpened ? '-' + toc.clientWidth + 'px' : '0px';
+      tocOpened = !tocOpened;
+    }
+
+    updateOverview();
+  };
+
+  var showHelp = function() {
+    if (tocOpened) {
+        showToc();
+    }
+
+    var help = document.getElementById('help');
+
+    if (help) {
+      help.style.marginLeft = helpOpened ? '-' + help.clientWidth + 'px' : '0px';
+      helpOpened = !helpOpened;
+    }
+  };
+
+  var showPresenterView = function() {
+    if (isPresenterView) { return; }
+
+    if (showingPresenterView) {
+      presenterViewWin.close();
+      presenterViewWin = null;
+      showingPresenterView = false;
+    } else {
+      presenterViewWin = open(window.location.pathname + "#presenter" + currentSlideNo, 'presenter_notes',
+                                  'directories=no,location=no,toolbar=no,menubar=no,copyhistory=no');
+      showingPresenterView = true;
+    }
+  }
+
+  var switch3D = function() {
+    if (document.body.className.indexOf('three-d') == -1) {
+      document.getElementsByClassName('presentation')[0].style.webkitPerspective = '1000px';
+      document.body.className += ' three-d';
+    } else {
+      window.setTimeout("document.getElementsByClassName('presentation')[0].style.webkitPerspective = '0';", 2000);
+      document.body.className = document.body.className.replace(/three-d/, '');
+    }
+  };
+
+  var toggleOverview = function() {
+    var action = overviewActive ? removeClass : addClass;
+    action(document.body, 'expose');
+    overviewActive = !overviewActive;
+    updateOverview();
+  };
+
+  var updateOverview = function() {
+    try {
+      var presentation = document.getElementsByClassName('presentation')[0];
+    } catch (e) {
+      return;
+    }
+
+    if (isPresenterView) {
+      var action = overviewActive ? removeClass : addClass;
+      action(document.body, 'presenter_view');
+    }
+
+    var toc = document.getElementById('toc');
+
+    if (!toc) {
+      return;
+    }
+    
+    if (!tocOpened || !overviewActive) {
+      presentation.style.marginLeft = '0px';
+      presentation.style.width = '100%';
+    } else {
+      presentation.style.marginLeft = toc.clientWidth + 'px';
+      presentation.style.width = (presentation.clientWidth - toc.clientWidth) + 'px';
+    }
+  };
+
+  var handleBodyKeyDown = function(event) {
+    switch (event.keyCode) {
+      case 13: // Enter
+        if (overviewActive) {
+          toggleOverview();
+        }
+        break;
+      case 27: // ESC
+        toggleOverview();
+        break;
+      case 37: // left arrow
+      case 38: // up arrow
+        prevSlide();
+        break;
+      case 39: // right arrow
+      case 40: // down arrow
+      case 32: // space
+        nextSlide();
+        break;
+      case 50: // 2
+        showNotes();
+        break;
+      case 51: // 3
+        switch3D();
+        break;
+      case 72: // h
+        showHelp();
+        break;
+      case 78: // n
+        showSlideNumbers();
+        break;
+      case 80: // p
+        showPresenterView();
+        break;
+      case 83: // s
+        showSlideSources();
+        break;
+      case 84: // t
+        showToc();
+        break;
+    }
+  };
+
+  var handleWheel = function(event) {
+    if (tocOpened || helpOpened) {
+      return;
+    }
+
+    var delta = 0;
+
+    if (!event) {
+      event = window.event;
+    }
+
+    if (event.wheelDelta) {
+      delta = event.wheelDelta/120;
+      if (window.opera) delta = -delta;
+    } else if (event.detail) {
+      delta = -event.detail/3;
+    }
+
+    if (delta && delta <0) {
+      nextSlide();
+    } else if (delta) {
+      prevSlide();
+    }
+  };
+
+  var addSlideClickListeners = function() {
+    for (var i=0; i < slides.length; i++) {
+      var slide = slides.item(i);
+      slide.num = i + 1;
+      slide.addEventListener('click', function(e) {
+        if (overviewActive) {
+          currentSlideNo = this.num;
+          toggleOverview();
+          updateSlideClasses(true);
+        }
+        return false;
+      }, true);
+    }
+  };
+
+  var addRemoteWindowControls = function() {
+    window.addEventListener("message", function(e) {
+      if (e.data.indexOf("slide#") != -1) {
+          currentSlideNo = Number(e.data.replace('slide#', ''));
+          updateSlideClasses(false);
+      }
+    }, false);
+  }
+
+  var addTouchListeners = function() {
+    document.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].pageX;
+    }, false);
+    document.addEventListener('touchend', function(e) {
+      var pixelsMoved = touchStartX - e.changedTouches[0].pageX;
+      var SWIPE_SIZE = 150;
+      if (pixelsMoved > SWIPE_SIZE) {
+        nextSlide();
+      }
+      else if (pixelsMoved < -SWIPE_SIZE) {
+       prevSlide();
+      }
+    }, false);
+  };
+
+  var addTocLinksListeners = function() {
+    var toc = document.getElementById('toc');
+
+    if (toc) {
+      var tocLinks = toc.getElementsByTagName('a');
+      for (var i=0; i < tocLinks.length; i++) {
+        tocLinks.item(i).addEventListener('click', function(e) {
+          currentSlideNo = Number(this.attributes['href'].value.replace('#slide', ''));
+          updateSlideClasses(true);
+          return false;
+        }, true);
+      }
+    }
+  };
+
+  // initialize
+
+  (function() {
+    if (window.location.hash == "") {
+      currentSlideNo = 1;
+    } else if (window.location.hash.indexOf("#presenter") != -1) {
+      currentSlideNo = Number(window.location.hash.replace('#presenter', ''));
+      isPresenterView = true;
+      showingPresenterView = true;
+      presenterViewWin = window;
+      addClass(document.body, 'presenter_view');
+    } else {
+      currentSlideNo = Number(window.location.hash.replace('#slide', ''));
+    }
+
+    document.addEventListener('keydown', handleBodyKeyDown, false);
+//    document.addEventListener('DOMMouseScroll', handleWheel, false);
+//    window.onmousewheel = document.onmousewheel = handleWheel;
+
+    var els = slides;
+    for (var i = 0, el; el = els[i]; i++) {
+      addClass(el, 'slide far-future');
+    }
+    updateSlideClasses(false);
+
+    // add support for finger events (filter it by property detection?)
+    addTouchListeners();
+
+    addTocLinksListeners();
+
+    addSlideClickListeners();
+
+    addRemoteWindowControls();
+  })();
+};
+
+    </script>
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <a href="http://github.com/BestFriendChris/resume"><img id="forkme" src="https://d3nwyuy0nl342s.cloudfront.net/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: src/title.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide title">
+          <div class="inner">
+            
+            <header><h1 id="r+sum+">Résumé</h1></header>
+            
+            
+            <section><h2 id="for_j_chris_turner">for J. Chris Turner</h2>
+<p><em>Press <code>space</code> to continue</em></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/title.mdown">src/title.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/how-to-use.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide how-to-use">
+          <div class="inner">
+            
+            <header><h1 id="how_to_use_this_r+sum+">How to use this Résumé</h1></header>
+            
+            
+            <section><ul>
+<li>Press <code>h</code> to toggle display of help</li>
+<li>Press <code>down arrow</code>, or <code>space</code> to navigate to next slide</li>
+<li>Press <code>up arrow</code> to navigate to previous slide</li>
+<li>Press <code>t</code> to toggle display of table of contents</li>
+<li>Press <code>ESC</code> to display the presentation overview (Exposé)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/how-to-use.mdown">src/how-to-use.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h1 id="about_chris">About Chris</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me contact">
+          <div class="inner">
+            
+            <header><h2 id="contact_information">Contact information</h2></header>
+            
+            
+            <section><ul>
+<li>E-Mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#46;&#99;&#104;&#114;&#105;&#115;&#46;&#116;&#117;&#114;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#46;&#99;&#104;&#114;&#105;&#115;&#46;&#116;&#117;&#114;&#110;&#101;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Twitter: <a href="http://twitter.com/BestFriendChris">@BestFriendChris</a></li>
+<li>Mobile Phone: (319) 210-8096</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="summary">Summary</h2></header>
+            
+            
+            <section><p>???</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="language_experience">Language Experience</h2></header>
+            
+            
+            <section><blockquote>
+<p>I believe that the more types of programming languages you know, the more tools you
+have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
+profound impact on how I write code in any language. Clearly I'm a language nerd.</p>
+</blockquote>
+<h3 id="specific_experience">Specific experience:</h3>
+<ul>
+<li>Java <em>(6 years professional experience, 10+ years total)</em></li>
+<li>Javascript <em>(4 years professional experience)</em></li>
+<li>Ruby <em>(10+ years experience)</em><ul>
+<li>Primarily used in small server scripts</li>
+<li>Haven't used it much lately, but picking it back up should be trivial</li>
+</ul>
+</li>
+<li>Clojure <em>(2 years experience)</em><ul>
+<li>Mostly on small, personal projects</li>
+</ul>
+</li>
+<li>bash/zsh scripting <em>(7+ years experience)</em></li>
+<li>Scheme, Haskell, C#, Objective-C, Scala<ul>
+<li>Light, but workable knowledge of all of these</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="tech_experience_-_testing">Tech Experience - Testing</h2></header>
+            
+            
+            <section><blockquote>
+<p>Automated testing is an important part of any software project. By working closely
+with the QAs on the various teams I've been a part of, I have a strong understanding
+of the ???</p>
+</blockquote>
+<h3 id="specific_experience_1">Specific experience:</h3>
+<ul>
+<li><a href="http://fit.c2.com/">Fit</a>/<a href="http://www.thoughtworks-studios.com/twist">Twist</a> <em>(5 years professional experience)</em><ul>
+<li>ThoughtWorks <a href="http://www.thoughtworks-studios.com/twist">Twist</a> product is largely inspired from <a href="http://fit.c2.com/">Fit</a></li>
+</ul>
+</li>
+<li><a href="http://seleniumhq.org/">Selenium</a>/<a href="http://webdriver.googlecode.com/">WebDriver</a>/<a href="http://sahi.co.in/w/">Sahi</a> <em>(5 years professional experience)</em><ul>
+<li><a href="http://webdriver.googlecode.com/">WebDriver</a> has been integrated into the latest version of <a href="http://seleniumhq.org/">Selenium</a></li>
+</ul>
+</li>
+<li><a href="http://www.junit.org/">JUnit</a> <em>(6 years professional experience)</em></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="tech_experience_-_builddeploy">Tech Experience - Build/Deploy</h2></header>
+            
+            
+            <section><blockquote>
+<p>On all software development projects I've been involved with, I've been the "build guy".
+I love working to improve the process of building and deploying software on the team
+to keep the build time down, receiving the fastest feedback possible of a broken build, and
+ensuring everybody on the team can use the build script effectively and easily.</p>
+<p>Most recently I've gotten interested in the DevOps movement. I like the bridging of
+my developer background with my (light) operations background. I've worked closely with
+Jez Humble (one of the authors of <a href="http://continuousdelivery.com/">Continuous Delivery</a>) for the better part
+of 4 years.</p>
+</blockquote>
+<h3 id="specific_experience_2">Specific experience:</h3>
+<ul>
+<li><a href="http://ant.apache.org/">Ant</a> <em>(6 years professional experience)</em></li>
+<li><a href="http://rake.rubyforge.org/">Rake</a> <em>(2 years professional experience)</em></li>
+<li><a href="http://buildr.apache.org/">Buildr</a> <em>(1 year professional experience)</em></li>
+<li><a href="http://www.opscode.com/chef/">Chef</a> <em>(2 years light experience)</em><ul>
+<li>Mostly played around with this in my free time</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="tech_experience_-_version_control">Tech Experience - Version Control</h2></header>
+            
+            
+            <section><blockquote>
+<p>I've been using version control systems for more than 7 years. I started using
+<a href="http://subversion.tigris.org/">Subversion</a>, but lately have been using DVCS almost exclusively. Professionally
+we've been using mostly <a href="http://mercurial.selenic.com/">Mercurial</a>, while for my personal projects I've been
+using primarily <a href="http://git-scm.com/">Git</a>.</p>
+</blockquote>
+<h3 id="specific_experience_3">Specific experience:</h3>
+<ul>
+<li><a href="http://git-scm.com/">Git</a> <em>(4 years experience)</em></li>
+<li><a href="http://mercurial.selenic.com/">Mercurial</a> <em>(4 years professional experience)</em></li>
+<li><a href="http://subversion.tigris.org/">Subversion</a> <em>(4 years professional experience)</em><ul>
+<li>Haven't used in several years</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/experience.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide experience">
+          <div class="inner">
+            
+            <header><h1 id="work_experience">Work Experience</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/experience.mdown">src/experience.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/experience.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide experience experience">
+          <div class="inner">
+            
+            <header><h2 id="networking_solutions">Networking Solutions</h2></header>
+            
+            
+            <section><p><em>June 2005 - Feb 2006</em></p>
+<p><strong>Network Technician</strong></p>
+<h3 id="about_networking_solutionsnetsol">About <a href="http://www.networkingiowa.com">Networking Solutions</a></h3>
+<p>Small organization primarily focused on being the IT organization for many smaller
+companies in the NE Iowa area.</p>
+<h3 id="responsibilities_included">Responsibilities included:</h3>
+<ul>
+<li>Software installation/maintenance on both server and desktop machines</li>
+<li>Cisco router configuration</li>
+<li>Wireless access point configuration and installation</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/experience.mdown">src/experience.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/experience.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide experience experience">
+          <div class="inner">
+            
+            <header><h2 id="thoughtworks">Thoughtworks</h2></header>
+            
+            
+            <section><p><em>Feb 2006 - Jul 2007</em></p>
+<p><strong>Software Development Consultant</strong></p>
+<h3 id="about_thoughtworkstw">About <a href="http://www.thoughtworks.com">Thoughtworks</a></h3>
+<p>???</p>
+<h3 id="responsibilities_included_1">Responsibilities included</h3>
+<ul>
+<li>In addition to my development responsibilities, helped out with both automated testing
+  and deployment into production.</li>
+<li>Worked on 2 client projects<ol>
+<li>Back-end system that parsed and processed a massive data set and inserted inserted
+   it into a database</li>
+<li>Team lead of a component in a large medical record system.</li>
+</ol>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/experience.mdown">src/experience.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/experience.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide experience experience">
+          <div class="inner">
+            
+            <header><h2 id="thoughtworks_studios">Thoughtworks Studios</h2></header>
+            
+            
+            <section><p><em>Aug 2007 - Mar 2010</em></p>
+<p><strong>Senior Developer - <a href="http://www.thoughtworks-studios.com/go">Go Continuous Delivery Server</a></strong></p>
+<h3 id="about_thoughtworks_studiostw-studios">About <a href="http://www.thoughtworks-studios.com">Thoughtworks Studios</a></h3>
+<p>???</p>
+<h3 id="responsibilities_included_2">Responsibilities included</h3>
+<ul>
+<li>Helped define the course of the product</li>
+<li>For 9 months, worked distributed with a <a href="http://www.thoughtworks-studios.com">ThoughtWorks</a> team in Beijing</li>
+<li>Introduced the DVCS <a href="http://mercurial.selenic.com/">Mercurial</a> to the team</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/experience.mdown">src/experience.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/experience.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide experience experience">
+          <div class="inner">
+            
+            <header><h2 id="thoughtworks_studios_1">Thoughtworks Studios</h2></header>
+            
+            
+            <section><p><em>Apr 2010 - Present</em></p>
+<p><strong>Agile Trainer and Coach</strong></p>
+<h3 id="responsibilities_include">Responsibilities include</h3>
+<ul>
+<li>Helped define the technical practices training program</li>
+<li>Delivered training material and coaching covering <ul>
+<li>Continuous Integration/Delivery best practices (using <a href="http://www.thoughtworks-studios.com/go">Go</a>)</li>
+<li>Automated Testing best practices (using <a href="http://www.thoughtworks-studios.com/twist">Twist</a>)</li>
+<li>General Agile Engineering Practices</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/experience.mdown">src/experience.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/interests.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide interests">
+          <div class="inner">
+            
+            <header><h1 id="interests">Interests</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/interests.mdown">src/interests.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/15
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+            
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Résumé</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-2">
+        <th><a href="#slide2">How to use this Résumé</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+            
+      <tr id="toc-row-3">
+        <th><a href="#slide3">About Chris</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-4" class="sub">
+          <th><a href="#slide4">Contact information</a></th>
+          <td><a href="#slide4">4</a></td>
+        </tr>
+        
+        <tr id="toc-row-5" class="sub">
+          <th><a href="#slide5">Summary</a></th>
+          <td><a href="#slide5">5</a></td>
+        </tr>
+        
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">Language Experience</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
+        <tr id="toc-row-7" class="sub">
+          <th><a href="#slide7">Tech Experience - Testing</a></th>
+          <td><a href="#slide7">7</a></td>
+        </tr>
+        
+        <tr id="toc-row-8" class="sub">
+          <th><a href="#slide8">Tech Experience - Build/Deploy</a></th>
+          <td><a href="#slide8">8</a></td>
+        </tr>
+        
+        <tr id="toc-row-9" class="sub">
+          <th><a href="#slide9">Tech Experience - Version Control</a></th>
+          <td><a href="#slide9">9</a></td>
+        </tr>
+        
+      
+            
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Work Experience</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Networking Solutions</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Thoughtworks</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">Thoughtworks Studios</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Thoughtworks Studios</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+      
+            
+      <tr id="toc-row-15">
+        <th><a href="#slide15">Interests</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
