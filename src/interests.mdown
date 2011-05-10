@@ -1,1 +1,51 @@
 # Interests
+
+---
+
+## Functional Programming
+
+The first language I learned was Scheme in a CS1 college course I took while in High
+School.  This has had a remarkable impact in the way that I think about writing
+software. I personally have found functional code to be easier to reason about,
+especially in the world of concurrent programming.
+
+It is for this reason that my current favorite programming language has become
+[Clojure][clj]. The multiple immutable data structures this language provides as well
+as lisp-like [homoiconicity][] and macro system are massively powerful.
+
+[clj]: http://clojure.org
+[homoiconicity]: http://en.wikipedia.org/wiki/Homoiconicity
+
+---
+
+## DevOps
+
+The industry has not completely solidified what the term `DevOps` actually means, but
+for me the idea is around bridging the worlds of Development and Operations.
+Traditional agile teams have focused and optimized primarily the creation, testing, and
+bug-fixing of features for the business. Speed of delivery (along with quality) is the
+primary motivator in this area. The operations groups tend to be more concerned with
+stability and maintainability. By leveraging learnings from the agile software movement
+(such as version control, automated testing, etc), the intent is to give operations the
+ability to better manage increasing volatility and speed within their sphere of
+influence.
+
+---
+
+## Programming Languages
+
+The interesting thing about programming languages is how they can shape the way you
+think about a problem. Some problems are better suited to one language over another.
+For example, primarily algorithmic or concurrency problems are best reasoned about in a
+functional language like Haskell or Clojure, whereas sequential, process oriented might
+find a better fit in a more procedural language like Java.
+
+Beyond shaping the way you think, programming languages are exploring many different
+focuses of the language. For example, Scala is exploring a mixed functional and object-oriented
+programming style, Clojure is exploring how best to write concurrent programs
+(primarily through the use of immutable data structures and a Software Transactional
+Memory system), Haskell has focused on functional purity, and Erlang has focused on
+high availability and uptime of the entire system (partly by allowing individual
+components to die and restart on error).
+
+I am a complete language nerd.

@@ -24,7 +24,7 @@
 
 > I believe that the more types of programming languages you know, the more tools you
 > have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
-> profound impact on how I write code in any language. I am a complete language nerd.
+> profound impact on how I write code in any language.
 
 ### Specific experience:
 
