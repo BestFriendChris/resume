@@ -4,22 +4,21 @@
 
 ## Networking Solutions
 
-.fx: experience
-
 _June 2005 - Feb 2006_
 
 **Network Technician**
 
 ### About [Networking Solutions][netsol]
 
-Small organization primarily focused on being the IT organization for many smaller
-companies in the NE Iowa area.
+> Small organization primarily focused on managing IT for many companies in the NE Iowa
+> area.
 
 ### Responsibilities included:
 
 * Software installation/maintenance on both server and desktop machines
 * Cisco router configuration
 * Wireless access point configuration and installation
+* Small software development projects for local companies
 
 [netsol]: http://www.networkingiowa.com
 
@@ -27,15 +26,16 @@ companies in the NE Iowa area.
 
 ## Thoughtworks
 
-.fx: experience
-
 _Feb 2006 - Jul 2007_
 
 **Software Development Consultant**
 
 ### About [Thoughtworks][tw]
 
-???
+> ThoughtWorks is a global IT consultancy, founded in 1993, focused on revolutionizing
+> software creation and delivery while advocating for positive social change in the
+> world. The company has been instrumental in the Agile software development movement,
+> especially in the distributed and enterprise spaces.
 
 ### Responsibilities included
 
@@ -52,31 +52,36 @@ _Feb 2006 - Jul 2007_
 
 ## Thoughtworks Studios
 
-.fx: experience
-
 _Aug 2007 - Mar 2010_
 
 **Senior Developer - [Go Continuous Delivery Server][go]**
 
 ### About [Thoughtworks Studios][tw-studios]
 
-???
+> ThoughtWorks Studios is the Agile software solutions and training devision of
+> [ThoughtWorks][tw]. Their products and services are used by nearly 400 organizations
+> worldwide. The products are focused on:
+<ul>
+    <li>Agile Project Management - [Mingle][]</li>
+    <li>Agile Testing - [Twist][]</li>
+    <li>Agile Release Management - [Go][]</li>
+<ol>
 
 ### Responsibilities included
 
 * Helped define the course of the product
-* For 9 months, worked distributed with a [ThoughtWorks][tw-studios] team in Beijing
+* For 9 months, worked distributed with a team in Beijing
 * Introduced the DVCS [Mercurial][hg] to the team
 
 [tw-studios]: http://www.thoughtworks-studios.com
+[mingle]: http://www.thoughtworks-studios.com/mingle
+[twist]: http://www.thoughtworks-studios.com/twist
 [go]: http://www.thoughtworks-studios.com/go
 [hg]: http://mercurial.selenic.com/
 
 ---
 
 ## Thoughtworks Studios
-
-.fx: experience
 
 _Apr 2010 - Present_
 

@@ -24,7 +24,7 @@
 
 > I believe that the more types of programming languages you know, the more tools you
 > have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
-> profound impact on how I write code in any language. Clearly I'm a language nerd.
+> profound impact on how I write code in any language. I am a complete language nerd.
 
 ### Specific experience:
 
@@ -41,39 +41,16 @@
 
 ---
 
-## Tech Experience - Testing
-
-> Automated testing is an important part of any software project. By working closely
-> with the QAs on the various teams I've been a part of, I have a strong understanding
-> of the ???
-
-### Specific experience:
-
-* [Fit][]/[Twist][] _(5 years professional experience)_
-    * ThoughtWorks [Twist][] product is largely inspired from [Fit][]
-* [Selenium][sel]/[WebDriver][wd]/[Sahi][sahi] _(5 years professional experience)_
-    * [WebDriver][wd] has been integrated into the latest version of [Selenium][sel]
-* [JUnit][junit] _(6 years professional experience)_
-
-[fit]: http://fit.c2.com/
-[twist]: http://www.thoughtworks-studios.com/twist
-[sel]: http://seleniumhq.org/
-[wd]: http://webdriver.googlecode.com/
-[sahi]: http://sahi.co.in/w/
-[junit]: http://www.junit.org/
-
----
-
 ## Tech Experience - Build/Deploy
 
 > On all software development projects I've been involved with, I've been the "build guy".
-> I love working to improve the process of building and deploying software on the team
-> to keep the build time down, receiving the fastest feedback possible of a broken build, and
-> ensuring everybody on the team can use the build script effectively and easily.
+> I love working to improve the process of building and deploying software to keep the 
+> build time down, to receive the fastest feedback possible of the status of the build, 
+> and ensuring everybody on the team can use the build script effectively and easily.
 
 > Most recently I've gotten interested in the DevOps movement. I like the bridging of
-> my developer background with my (light) operations background. I've worked closely with
-> Jez Humble (one of the authors of [Continuous Delivery][cdbook]) for the better part
+> my developer background with my (light) operations background. I've also worked closely 
+> with Jez Humble (co-author of the [Continuous Delivery][cdbook] book) for the better part
 > of 4 years.
 
 ### Specific experience:
@@ -89,6 +66,30 @@
 [rake]: http://rake.rubyforge.org/
 [buildr]: http://buildr.apache.org/
 [chef]: http://www.opscode.com/chef/
+
+---
+
+## Tech Experience - Testing
+
+> Automated testing is an important part of any software project. By working closely
+> with the QAs on the various teams I've been a part of, I have a strong understanding
+> of the best ways to structure and organize automated functional test scripts, as well
+> as the code underneath.
+
+### Specific experience:
+
+* [Fit][]/[Twist][] _(5 years professional experience)_
+    * ThoughtWorks [Twist][] product is largely inspired from [Fit][]
+* [Selenium][sel]/[WebDriver][wd]/[Sahi][sahi] _(5 years professional experience)_
+    * [WebDriver][wd] has been integrated into the latest version of [Selenium][sel]
+* [JUnit][junit] _(6 years professional experience)_
+
+[fit]: http://fit.c2.com/
+[twist]: http://www.thoughtworks-studios.com/twist
+[sel]: http://seleniumhq.org/
+[wd]: http://webdriver.googlecode.com/
+[sahi]: http://sahi.co.in/w/
+[junit]: http://www.junit.org/
 
 ---
 
