@@ -10,8 +10,9 @@ _June 2005 - Feb 2006_
 
 ### About [Networking Solutions][netsol]
 
-> Small organization primarily focused on managing IT for many companies in the NE Iowa
-> area.
+> Networking Solutions is a small organization primarily focused on managing IT for
+> many companies in the NE Iowa area. The company manages not only the network
+> infrastructure, but also does small custom application development as needed.
 
 ### Responsibilities included:
 
@@ -24,7 +25,7 @@ _June 2005 - Feb 2006_
 
 ---
 
-## Thoughtworks
+## ThoughtWorks
 
 _Feb 2006 - Jul 2007_
 
@@ -39,8 +40,8 @@ _Feb 2006 - Jul 2007_
 
 ### Responsibilities included
 
-* In addition to my development responsibilities, helped out with both automated testing
-  and deployment into production.
+* In addition to my development responsibilities, I helped out with both automated
+  testing and deployment into production.
 * Worked on 2 client projects
     1. Back-end system that parsed and processed a massive data set and inserted inserted
        it into a database
@@ -50,7 +51,7 @@ _Feb 2006 - Jul 2007_
 
 ---
 
-## Thoughtworks Studios
+## ThoughtWorks Studios
 
 _Aug 2007 - Mar 2010_
 
@@ -64,7 +65,7 @@ _Aug 2007 - Mar 2010_
 <ul>
     <li>Agile Project Management - [Mingle][]</li>
     <li>Agile Testing - [Twist][]</li>
-    <li>Agile Release Management - [Go][]</li>
+    <li>Agile Release Management and Continuous Delivery - [Go][]</li>
 <ol>
 
 ### Responsibilities included
@@ -81,7 +82,7 @@ _Aug 2007 - Mar 2010_
 
 ---
 
-## Thoughtworks Studios
+## ThoughtWorks Studios
 
 _Apr 2010 - Present_
 
@@ -94,6 +95,7 @@ _Apr 2010 - Present_
     * Continuous Integration/Delivery best practices (using [Go][])
     * Automated Testing best practices (using [Twist][])
     * General Agile Engineering Practices
+    * Continous Delivery
 
 [twist]: http://www.thoughtworks-studios.com/twist
 [go]: http://www.thoughtworks-studios.com/go
