@@ -2,52 +2,23 @@
 
 ---
 
-## Networking Solutions
+## ThoughtWorks Studios
 
-_June 2005 - Feb 2006_
+_Apr 2010 - Present_
 
-**Network Technician**
+**Agile Trainer and Coach**
 
-### About [Networking Solutions][netsol]
+### Responsibilities include
 
-> Networking Solutions is a small organization primarily focused on managing IT for
-> many companies in the NE Iowa area. The company manages not only the network
-> infrastructure, but also does small custom application development as needed.
+* Helped define the technical practices training program
+* Delivered training material and coaching covering 
+    * Continuous Integration/Delivery best practices (using [Go][])
+    * Automated Testing best practices (using [Twist][])
+    * General Agile Engineering Practices
+    * Continous Delivery
 
-### Responsibilities included:
-
-* Software installation/maintenance on both server and desktop machines
-* Cisco router configuration
-* Wireless access point configuration and installation
-* Small software development projects for local companies
-
-[netsol]: http://www.networkingiowa.com
-
----
-
-## ThoughtWorks
-
-_Feb 2006 - Jul 2007_
-
-**Software Development Consultant**
-
-### About [Thoughtworks][tw]
-
-> ThoughtWorks is a global IT consultancy, founded in 1993, focused on revolutionizing
-> software creation and delivery while advocating for positive social change in the
-> world. The company has been instrumental in the Agile software development movement,
-> especially in the distributed and enterprise spaces.
-
-### Responsibilities included
-
-* In addition to my development responsibilities, I helped out with both automated
-  testing and deployment into production.
-* Worked on 2 client projects
-    1. Back-end system that parsed and processed a massive data set and inserted inserted
-       it into a database
-    2. Team lead of a component in a large medical record system.
-
-[tw]: http://www.thoughtworks.com
+[twist]: http://www.thoughtworks-studios.com/twist
+[go]: http://www.thoughtworks-studios.com/go
 
 ---
 
@@ -82,20 +53,49 @@ _Aug 2007 - Mar 2010_
 
 ---
 
-## ThoughtWorks Studios
+## ThoughtWorks
 
-_Apr 2010 - Present_
+_Feb 2006 - Jul 2007_
 
-**Agile Trainer and Coach**
+**Software Development Consultant**
 
-### Responsibilities include
+### About [Thoughtworks][tw]
 
-* Helped define the technical practices training program
-* Delivered training material and coaching covering 
-    * Continuous Integration/Delivery best practices (using [Go][])
-    * Automated Testing best practices (using [Twist][])
-    * General Agile Engineering Practices
-    * Continous Delivery
+> ThoughtWorks is a global IT consultancy, founded in 1993, focused on revolutionizing
+> software creation and delivery while advocating for positive social change in the
+> world. The company has been instrumental in the Agile software development movement,
+> especially in the distributed and enterprise spaces.
 
-[twist]: http://www.thoughtworks-studios.com/twist
-[go]: http://www.thoughtworks-studios.com/go
+### Responsibilities included
+
+* In addition to my development responsibilities, I helped out with both automated
+  testing and deployment into production.
+* Worked on 2 client projects
+    1. Back-end system that parsed and processed a massive data set and inserted inserted
+       it into a database
+    2. Team lead of a component in a large medical record system.
+
+[tw]: http://www.thoughtworks.com
+
+---
+
+## Networking Solutions
+
+_June 2005 - Feb 2006_
+
+**Network Technician**
+
+### About [Networking Solutions][netsol]
+
+> Networking Solutions is a small organization primarily focused on managing IT for
+> many companies in the NE Iowa area. The company manages not only the network
+> infrastructure, but also does small custom application development as needed.
+
+### Responsibilities included:
+
+* Software installation/maintenance on both server and desktop machines
+* Cisco router configuration
+* Wireless access point configuration and installation
+* Small software development projects for local companies
+
+[netsol]: http://www.networkingiowa.com
