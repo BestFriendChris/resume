@@ -3,7 +3,6 @@
 ---
 
 ## Contact information
-.fx: contact
 
 * E-Mail: <j.chris.turner@gmail.com>
 * Twitter: [@BestFriendChris][twitter]
@@ -15,5 +14,46 @@
 
 ## Summary
 
-???
+This is my (professional) story. I'm hoping you'll find it interesting, if not in
+content, at least in form.
 
+I have been lucky enough to have a large variety in my career. From working on Windows
+servers and Cisco routers, to helping to define and implement a world class continuous
+delivery and release software product, to coaching and training organizations in how to
+implement agile methodologies in their own unique situation. Everything I have done has
+made me appreciate a simple reality: communication is the most important thing on any
+team. It doesn't matter role you are filling or what work you are doing.
+
+---
+
+## About this Résumé
+
+This résumé is written in [Markdown][], stored on [Github][] ([here][gh-resume]), and
+generated into slides using [Landslide][].
+
+Styling was based on the default Landslide theme, heavily modified by me to make it
+appear more professional (for some definition of professional).
+
+### Landslide
+
+In my work this past year as an agile trainer and coach, I've found myself spending an
+inordinate amount of time in PowerPoint. One aspect of this that has really bothered
+me is how we are all editing a large binary file shared with everybody on the team over
+a network drive ([Dropbox][] in this case).
+
+I recently started looking for something that was more VCS friendly and found
+Landslide. The fact that it allows for separation between layout and content (using
+themes that are a mix of html, css, and javascript) has been an even bigger bonus.
+
+I recently submitted a patch to the Landslide project ([my fork][my-landslide]) that
+adds support for a presenter view. To see this in action, press `p` right now. You
+should see another window open up that shows the current and next slides, as well as
+any presenter notes associated with a slide. Both windows are kept in sync using
+javascript.
+
+[markdown]: http://daringfireball.net/projects/markdown/
+[github]: https://github.com
+[gh-resume]: http://github.com/BestFriendChris/resume
+[landslide]: https://github.com/adamzap/landslide
+[Dropbox]: http://www.dropbox.com/
+[my-landslide]: https://github.com/BestFriendChris/landslide/tree/presenter-view

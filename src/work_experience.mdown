@@ -8,6 +8,17 @@ _Apr 2010 - Present_
 
 **Agile Trainer and Coach**
 
+### About [Thoughtworks Studios][tw-studios]
+
+> ThoughtWorks Studios is the Agile software solutions and training devision of
+> [ThoughtWorks][tw]. Their products and services are used by nearly 400 organizations
+> worldwide. The products are focused on:
+<ul>
+    <li>Agile Project Management - [Mingle][]</li>
+    <li>Agile Testing - [Twist][]</li>
+    <li>Agile Release Management and Continuous Delivery - [Go][]</li>
+<ol>
+
 ### Responsibilities include
 
 * Helped define the technical practices training program
@@ -27,17 +38,6 @@ _Apr 2010 - Present_
 _Aug 2007 - Mar 2010_
 
 **Senior Developer - [Go Continuous Delivery Server][go]**
-
-### About [Thoughtworks Studios][tw-studios]
-
-> ThoughtWorks Studios is the Agile software solutions and training devision of
-> [ThoughtWorks][tw]. Their products and services are used by nearly 400 organizations
-> worldwide. The products are focused on:
-<ul>
-    <li>Agile Project Management - [Mingle][]</li>
-    <li>Agile Testing - [Twist][]</li>
-    <li>Agile Release Management and Continuous Delivery - [Go][]</li>
-<ol>
 
 ### Responsibilities included
 
