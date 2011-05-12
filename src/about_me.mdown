@@ -38,8 +38,8 @@ appear more professional (for some definition of professional).
 
 In my work this past year as an agile trainer and coach, I've found myself spending an
 inordinate amount of time in PowerPoint. One aspect of this that has really bothered
-me is how we are all editing a large binary file shared with everybody on the team over
-a network drive ([Dropbox][] in this case).
+me is how we are all editing a large binary file, shared with everybody on the team
+over a network drive ([Dropbox][] in this case).
 
 I recently started looking for something that was more VCS friendly and found
 Landslide. The fact that it allows for separation between layout and content (using

@@ -5,12 +5,11 @@
 ## ThoughtWorks Studios
 
 _Apr 2010 - Present_
-
 **Agile Trainer and Coach**
 
-### About [Thoughtworks Studios][tw-studios]
+### About Thoughtworks Studios
 
-> ThoughtWorks Studios is the Agile software solutions and training devision of
+> [ThoughtWorks Studios][tw-studios] is the Agile software solutions and training devision of
 > [ThoughtWorks][tw]. Their products and services are used by nearly 400 organizations
 > worldwide. The products are focused on:
 <ul>
@@ -36,7 +35,6 @@ _Apr 2010 - Present_
 ## ThoughtWorks Studios
 
 _Aug 2007 - Mar 2010_
-
 **Senior Developer - [Go Continuous Delivery Server][go]**
 
 ### Responsibilities included
@@ -56,12 +54,11 @@ _Aug 2007 - Mar 2010_
 ## ThoughtWorks
 
 _Feb 2006 - Jul 2007_
-
 **Software Development Consultant**
 
-### About [Thoughtworks][tw]
+### About Thoughtworks
 
-> ThoughtWorks is a global IT consultancy, founded in 1993, focused on revolutionizing
+> [ThoughtWorks][tw] is a global IT consultancy, founded in 1993, focused on revolutionizing
 > software creation and delivery while advocating for positive social change in the
 > world. The company has been instrumental in the Agile software development movement,
 > especially in the distributed and enterprise spaces.
@@ -82,16 +79,15 @@ _Feb 2006 - Jul 2007_
 ## Networking Solutions
 
 _June 2005 - Feb 2006_
-
 **Network Technician**
 
-### About [Networking Solutions][netsol]
+### About Networking Solutions
 
-> Networking Solutions is a small organization primarily focused on managing IT for
+> [Networking Solutions][netsol] is a small organization primarily focused on managing IT for
 > many companies in the NE Iowa area. The company manages not only the network
 > infrastructure, but also does small custom application development as needed.
 
-### Responsibilities included:
+### Responsibilities included
 
 * Software installation/maintenance on both server and desktop machines
 * Cisco router configuration

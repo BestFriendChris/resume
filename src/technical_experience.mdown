@@ -8,7 +8,7 @@
 > have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
 > profound impact on how I write code in any language.
 
-### Specific experience:
+### Specific experience
 
 * Java _(6 years professional experience, 10+ years total)_
 * Javascript _(4 years professional experience)_
@@ -35,7 +35,7 @@
 > with Jez Humble (co-author of the [Continuous Delivery][cdbook] book) for the better part
 > of 4 years.
 
-### Specific experience:
+### Specific experience
 
 * [Ant][ant] _(6 years professional experience)_
 * [Rake][rake] _(2 years professional experience)_
@@ -58,7 +58,7 @@
 > of the best ways to structure and organize automated functional test scripts, as well
 > as the code underneath.
 
-### Specific experience:
+### Specific experience
 
 * [Fit][]/[Twist][] _(5 years professional experience)_
     * ThoughtWorks [Twist][] product is largely inspired from [Fit][]
@@ -82,7 +82,7 @@
 > we've been using mostly [Mercurial][hg], while for my personal projects I've been
 > using primarily [Git][].
 
-### Specific experience:
+### Specific experience
 
 * [Git][] _(4 years experience)_
 * [Mercurial][hg] _(4 years professional experience)_
