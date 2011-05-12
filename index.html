@@ -423,6 +423,7 @@ body.three-d div.slides {
   -moz-border-radius-topright: 20px;
   -webkit-border-top-right-radius: 20px;
   padding: 15px 30px;
+  text-align: center;
 }
 
 .slide header {
@@ -487,8 +488,8 @@ body.three-d div.slides {
 }
 
 .slide li {
-  padding: 10px 0;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .slide header:only-child h1 {
@@ -683,6 +684,70 @@ aside {
 .vg { color: #19177C } /* Name.Variable.Global */
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* @end */
+
+/* @group Topic specific layout */
+
+.slide .inner h3 {
+  text-align: center;
+  background-color: #2E3F53;
+  color: #E9DCB9;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.slide.title header {
+  text-align: center;
+  height: 50%;
+  font-size: 10em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.slide.title header h1 {
+  display: block;
+  top: 25%;
+  position: relative;
+}
+
+.slide.title section {
+  bottom: 0;
+  font-size: 4em;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50%;
+}
+
+.slide .inner ul ul li {
+  list-style-type: none;
+  border-left: 5px solid #2E3F53;
+  padding-left: 5px;
+}
+
+.slide.work_experience blockquote {
+  border-left: 5px solid #2e3f53;
+  padding-left: 5px;
+}
+
+.slide.work_experience p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.slide.work_experience em {
+  margin-right: 10px;
+  float: right;
+}
+
+.slide.work_experience strong {
+  margin-left: 10px;
+  display: block;
+}
 
 /* @end */
 
@@ -1170,7 +1235,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/19
+              1/20
             </aside>
           </footer>
         </div>
@@ -1206,7 +1271,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/19
+              2/20
             </aside>
           </footer>
         </div>
@@ -1234,7 +1299,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/19
+              3/20
             </aside>
           </footer>
         </div>
@@ -1242,7 +1307,7 @@ aside {
       
       <!-- slide source: src/about_me.mdown -->
       <div class="slide-wrapper">
-        <div class="slide about_me contact">
+        <div class="slide about_me">
           <div class="inner">
             
             <header><h2 id="contact_information">Contact information</h2></header>
@@ -1268,7 +1333,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              4/19
+              4/20
             </aside>
           </footer>
         </div>
@@ -1282,7 +1347,14 @@ aside {
             <header><h2 id="summary">Summary</h2></header>
             
             
-            <section><p>???</p></section>
+            <section><p>This is my (professional) story. I'm hoping you'll find it interesting, if not in
+content, at least in form.</p>
+<p>I have been lucky enough to have a large variety in my career. From working on Windows
+servers and Cisco routers, to helping to define and implement a world class continuous
+delivery and release software product, to coaching and training organizations in how to
+implement agile methodologies in their own unique situation. Everything I have done has
+made me appreciate a simple reality: communication is the most important thing on any
+team. It doesn't matter role you are filling or what work you are doing.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1298,7 +1370,53 @@ aside {
             </aside>
             
             <aside class="page_number">
-              5/19
+              5/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: src/about_me.mdown -->
+      <div class="slide-wrapper">
+        <div class="slide about_me">
+          <div class="inner">
+            
+            <header><h2 id="about_this_r+sum+">About this Résumé</h2></header>
+            
+            
+            <section><p>This résumé is written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, stored on <a href="https://github.com">Github</a> (<a href="http://github.com/BestFriendChris/resume">here</a>), and
+generated into slides using <a href="https://github.com/adamzap/landslide">Landslide</a>.</p>
+<p>Styling was based on the default Landslide theme, heavily modified by me to make it
+appear more professional (for some definition of professional).</p>
+<h3 id="landslide">Landslide</h3>
+<p>In my work this past year as an agile trainer and coach, I've found myself spending an
+inordinate amount of time in PowerPoint. One aspect of this that has really bothered
+me is how we are all editing a large binary file, shared with everybody on the team
+over a network drive (<a href="http://www.dropbox.com/">Dropbox</a> in this case).</p>
+<p>I recently started looking for something that was more VCS friendly and found
+Landslide. The fact that it allows for separation between layout and content (using
+themes that are a mix of html, css, and javascript) has been an even bigger bonus.</p>
+<p>I recently submitted a patch to the Landslide project (<a href="https://github.com/BestFriendChris/landslide/tree/presenter-view">my fork</a>) that
+adds support for a presenter view. To see this in action, press <code>p</code> right now. You
+should see another window open up that shows the current and next slides, as well as
+any presenter notes associated with a slide. Both windows are kept in sync using
+javascript.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="file:///Users/bestfriendchris/Documents/resume/src/about_me.mdown">src/about_me.mdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/20
             </aside>
           </footer>
         </div>
@@ -1326,7 +1444,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              6/19
+              7/20
             </aside>
           </footer>
         </div>
@@ -1345,7 +1463,7 @@ aside {
 have in your toolbox. Some languages (Haskell, Clojure, Javascript, Scheme) have had a
 profound impact on how I write code in any language.</p>
 </blockquote>
-<h3 id="specific_experience">Specific experience:</h3>
+<h3 id="specific_experience">Specific experience</h3>
 <ul>
 <li>Java <em>(6 years professional experience, 10+ years total)</em></li>
 <li>Javascript <em>(4 years professional experience)</em></li>
@@ -1379,7 +1497,7 @@ profound impact on how I write code in any language.</p>
             </aside>
             
             <aside class="page_number">
-              7/19
+              8/20
             </aside>
           </footer>
         </div>
@@ -1403,7 +1521,7 @@ my developer background with my (light) operations background. I've also worked 
 with Jez Humble (co-author of the <a href="http://continuousdelivery.com/">Continuous Delivery</a> book) for the better part
 of 4 years.</p>
 </blockquote>
-<h3 id="specific_experience_1">Specific experience:</h3>
+<h3 id="specific_experience_1">Specific experience</h3>
 <ul>
 <li><a href="http://ant.apache.org/">Ant</a> <em>(6 years professional experience)</em></li>
 <li><a href="http://rake.rubyforge.org/">Rake</a> <em>(2 years professional experience)</em></li>
@@ -1428,7 +1546,7 @@ of 4 years.</p>
             </aside>
             
             <aside class="page_number">
-              8/19
+              9/20
             </aside>
           </footer>
         </div>
@@ -1448,7 +1566,7 @@ with the QAs on the various teams I've been a part of, I have a strong understan
 of the best ways to structure and organize automated functional test scripts, as well
 as the code underneath.</p>
 </blockquote>
-<h3 id="specific_experience_2">Specific experience:</h3>
+<h3 id="specific_experience_2">Specific experience</h3>
 <ul>
 <li><a href="http://fit.c2.com/">Fit</a>/<a href="http://www.thoughtworks-studios.com/twist">Twist</a> <em>(5 years professional experience)</em><ul>
 <li>ThoughtWorks <a href="http://www.thoughtworks-studios.com/twist">Twist</a> product is largely inspired from <a href="http://fit.c2.com/">Fit</a></li>
@@ -1475,7 +1593,7 @@ as the code underneath.</p>
             </aside>
             
             <aside class="page_number">
-              9/19
+              10/20
             </aside>
           </footer>
         </div>
@@ -1495,7 +1613,7 @@ as the code underneath.</p>
 we've been using mostly <a href="http://mercurial.selenic.com/">Mercurial</a>, while for my personal projects I've been
 using primarily <a href="http://git-scm.com/">Git</a>.</p>
 </blockquote>
-<h3 id="specific_experience_3">Specific experience:</h3>
+<h3 id="specific_experience_3">Specific experience</h3>
 <ul>
 <li><a href="http://git-scm.com/">Git</a> <em>(4 years experience)</em></li>
 <li><a href="http://mercurial.selenic.com/">Mercurial</a> <em>(4 years professional experience)</em></li>
@@ -1519,7 +1637,7 @@ using primarily <a href="http://git-scm.com/">Git</a>.</p>
             </aside>
             
             <aside class="page_number">
-              10/19
+              11/20
             </aside>
           </footer>
         </div>
@@ -1547,7 +1665,7 @@ using primarily <a href="http://git-scm.com/">Git</a>.</p>
             </aside>
             
             <aside class="page_number">
-              11/19
+              12/20
             </aside>
           </footer>
         </div>
@@ -1561,8 +1679,19 @@ using primarily <a href="http://git-scm.com/">Git</a>.</p>
             <header><h2 id="thoughtworks_studios">ThoughtWorks Studios</h2></header>
             
             
-            <section><p><em>Apr 2010 - Present</em></p>
-<p><strong>Agile Trainer and Coach</strong></p>
+            <section><p><em>Apr 2010 - Present</em>
+<strong>Agile Trainer and Coach</strong></p>
+<h3 id="about_thoughtworks_studios">About Thoughtworks Studios</h3>
+<blockquote>
+<p><a href="http://www.thoughtworks-studios.com">ThoughtWorks Studios</a> is the Agile software solutions and training devision of
+<a href="http://www.thoughtworks.com">ThoughtWorks</a>. Their products and services are used by nearly 400 organizations
+worldwide. The products are focused on:
+<ul>
+    <li>Agile Project Management - <a href="http://www.thoughtworks-studios.com/mingle">Mingle</a></li>
+    <li>Agile Testing - <a href="http://www.thoughtworks-studios.com/twist">Twist</a></li>
+    <li>Agile Release Management and Continuous Delivery - <a href="http://www.thoughtworks-studios.com/go">Go</a></li>
+<ol></p>
+</blockquote>
 <h3 id="responsibilities_include">Responsibilities include</h3>
 <ul>
 <li>Helped define the technical practices training program</li>
@@ -1589,7 +1718,7 @@ using primarily <a href="http://git-scm.com/">Git</a>.</p>
             </aside>
             
             <aside class="page_number">
-              12/19
+              13/20
             </aside>
           </footer>
         </div>
@@ -1603,19 +1732,8 @@ using primarily <a href="http://git-scm.com/">Git</a>.</p>
             <header><h2 id="thoughtworks_studios_1">ThoughtWorks Studios</h2></header>
             
             
-            <section><p><em>Aug 2007 - Mar 2010</em></p>
-<p><strong>Senior Developer - <a href="http://www.thoughtworks-studios.com/go">Go Continuous Delivery Server</a></strong></p>
-<h3 id="about_thoughtworks_studiostw-studios">About <a href="http://www.thoughtworks-studios.com">Thoughtworks Studios</a></h3>
-<blockquote>
-<p>ThoughtWorks Studios is the Agile software solutions and training devision of
-<a href="http://www.thoughtworks.com">ThoughtWorks</a>. Their products and services are used by nearly 400 organizations
-worldwide. The products are focused on:
-<ul>
-    <li>Agile Project Management - <a href="http://www.thoughtworks-studios.com/mingle">Mingle</a></li>
-    <li>Agile Testing - <a href="http://www.thoughtworks-studios.com/twist">Twist</a></li>
-    <li>Agile Release Management and Continuous Delivery - <a href="http://www.thoughtworks-studios.com/go">Go</a></li>
-<ol></p>
-</blockquote>
+            <section><p><em>Aug 2007 - Mar 2010</em>
+<strong>Senior Developer - <a href="http://www.thoughtworks-studios.com/go">Go Continuous Delivery Server</a></strong></p>
 <h3 id="responsibilities_included">Responsibilities included</h3>
 <ul>
 <li>Helped define the course of the product</li>
@@ -1637,7 +1755,7 @@ worldwide. The products are focused on:
             </aside>
             
             <aside class="page_number">
-              13/19
+              14/20
             </aside>
           </footer>
         </div>
@@ -1651,11 +1769,11 @@ worldwide. The products are focused on:
             <header><h2 id="thoughtworks">ThoughtWorks</h2></header>
             
             
-            <section><p><em>Feb 2006 - Jul 2007</em></p>
-<p><strong>Software Development Consultant</strong></p>
-<h3 id="about_thoughtworkstw">About <a href="http://www.thoughtworks.com">Thoughtworks</a></h3>
+            <section><p><em>Feb 2006 - Jul 2007</em>
+<strong>Software Development Consultant</strong></p>
+<h3 id="about_thoughtworks">About Thoughtworks</h3>
 <blockquote>
-<p>ThoughtWorks is a global IT consultancy, founded in 1993, focused on revolutionizing
+<p><a href="http://www.thoughtworks.com">ThoughtWorks</a> is a global IT consultancy, founded in 1993, focused on revolutionizing
 software creation and delivery while advocating for positive social change in the
 world. The company has been instrumental in the Agile software development movement,
 especially in the distributed and enterprise spaces.</p>
@@ -1686,7 +1804,7 @@ especially in the distributed and enterprise spaces.</p>
             </aside>
             
             <aside class="page_number">
-              14/19
+              15/20
             </aside>
           </footer>
         </div>
@@ -1700,15 +1818,15 @@ especially in the distributed and enterprise spaces.</p>
             <header><h2 id="networking_solutions">Networking Solutions</h2></header>
             
             
-            <section><p><em>June 2005 - Feb 2006</em></p>
-<p><strong>Network Technician</strong></p>
-<h3 id="about_networking_solutionsnetsol">About <a href="http://www.networkingiowa.com">Networking Solutions</a></h3>
+            <section><p><em>June 2005 - Feb 2006</em>
+<strong>Network Technician</strong></p>
+<h3 id="about_networking_solutions">About Networking Solutions</h3>
 <blockquote>
-<p>Networking Solutions is a small organization primarily focused on managing IT for
+<p><a href="http://www.networkingiowa.com">Networking Solutions</a> is a small organization primarily focused on managing IT for
 many companies in the NE Iowa area. The company manages not only the network
 infrastructure, but also does small custom application development as needed.</p>
 </blockquote>
-<h3 id="responsibilities_included_2">Responsibilities included:</h3>
+<h3 id="responsibilities_included_2">Responsibilities included</h3>
 <ul>
 <li>Software installation/maintenance on both server and desktop machines</li>
 <li>Cisco router configuration</li>
@@ -1730,7 +1848,7 @@ infrastructure, but also does small custom application development as needed.</p
             </aside>
             
             <aside class="page_number">
-              15/19
+              16/20
             </aside>
           </footer>
         </div>
@@ -1758,7 +1876,7 @@ infrastructure, but also does small custom application development as needed.</p
             </aside>
             
             <aside class="page_number">
-              16/19
+              17/20
             </aside>
           </footer>
         </div>
@@ -1794,7 +1912,7 @@ as lisp-like <a href="http://en.wikipedia.org/wiki/Homoiconicity">homoiconicity<
             </aside>
             
             <aside class="page_number">
-              17/19
+              18/20
             </aside>
           </footer>
         </div>
@@ -1832,7 +1950,7 @@ influence.</p></section>
             </aside>
             
             <aside class="page_number">
-              18/19
+              19/20
             </aside>
           </footer>
         </div>
@@ -1874,7 +1992,7 @@ components to die and restart on error).</p>
             </aside>
             
             <aside class="page_number">
-              19/19
+              20/20
             </aside>
           </footer>
         </div>
@@ -1916,46 +2034,46 @@ components to die and restart on error).</p>
           <td><a href="#slide5">5</a></td>
         </tr>
         
+        <tr id="toc-row-6" class="sub">
+          <th><a href="#slide6">About this Résumé</a></th>
+          <td><a href="#slide6">6</a></td>
+        </tr>
+        
       
             
-      <tr id="toc-row-6">
-        <th><a href="#slide6">Technical Experience</a></th>
-        <td><a href="#slide6">6</a></td>
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Technical Experience</a></th>
+        <td><a href="#slide7">7</a></td>
       </tr>
       
         
-        <tr id="toc-row-7" class="sub">
-          <th><a href="#slide7">Programming Languages</a></th>
-          <td><a href="#slide7">7</a></td>
-        </tr>
-        
         <tr id="toc-row-8" class="sub">
-          <th><a href="#slide8">Build/Deploy</a></th>
+          <th><a href="#slide8">Programming Languages</a></th>
           <td><a href="#slide8">8</a></td>
         </tr>
         
         <tr id="toc-row-9" class="sub">
-          <th><a href="#slide9">Testing</a></th>
+          <th><a href="#slide9">Build/Deploy</a></th>
           <td><a href="#slide9">9</a></td>
         </tr>
         
         <tr id="toc-row-10" class="sub">
-          <th><a href="#slide10">Version Control</a></th>
+          <th><a href="#slide10">Testing</a></th>
           <td><a href="#slide10">10</a></td>
+        </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Version Control</a></th>
+          <td><a href="#slide11">11</a></td>
         </tr>
         
       
             
-      <tr id="toc-row-11">
-        <th><a href="#slide11">Work Experience</a></th>
-        <td><a href="#slide11">11</a></td>
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Work Experience</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
-        
-        <tr id="toc-row-12" class="sub">
-          <th><a href="#slide12">ThoughtWorks Studios</a></th>
-          <td><a href="#slide12">12</a></td>
-        </tr>
         
         <tr id="toc-row-13" class="sub">
           <th><a href="#slide13">ThoughtWorks Studios</a></th>
@@ -1963,36 +2081,41 @@ components to die and restart on error).</p>
         </tr>
         
         <tr id="toc-row-14" class="sub">
-          <th><a href="#slide14">ThoughtWorks</a></th>
+          <th><a href="#slide14">ThoughtWorks Studios</a></th>
           <td><a href="#slide14">14</a></td>
         </tr>
         
         <tr id="toc-row-15" class="sub">
-          <th><a href="#slide15">Networking Solutions</a></th>
+          <th><a href="#slide15">ThoughtWorks</a></th>
           <td><a href="#slide15">15</a></td>
+        </tr>
+        
+        <tr id="toc-row-16" class="sub">
+          <th><a href="#slide16">Networking Solutions</a></th>
+          <td><a href="#slide16">16</a></td>
         </tr>
         
       
             
-      <tr id="toc-row-16">
-        <th><a href="#slide16">Interests</a></th>
-        <td><a href="#slide16">16</a></td>
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Interests</a></th>
+        <td><a href="#slide17">17</a></td>
       </tr>
       
         
-        <tr id="toc-row-17" class="sub">
-          <th><a href="#slide17">Functional Programming</a></th>
-          <td><a href="#slide17">17</a></td>
-        </tr>
-        
         <tr id="toc-row-18" class="sub">
-          <th><a href="#slide18">DevOps</a></th>
+          <th><a href="#slide18">Functional Programming</a></th>
           <td><a href="#slide18">18</a></td>
         </tr>
         
         <tr id="toc-row-19" class="sub">
-          <th><a href="#slide19">Programming Languages</a></th>
+          <th><a href="#slide19">DevOps</a></th>
           <td><a href="#slide19">19</a></td>
+        </tr>
+        
+        <tr id="toc-row-20" class="sub">
+          <th><a href="#slide20">Programming Languages</a></th>
+          <td><a href="#slide20">20</a></td>
         </tr>
         
       
