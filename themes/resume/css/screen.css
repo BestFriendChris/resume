@@ -312,6 +312,7 @@ body.three-d div.slides {
   -moz-border-radius-topright: 20px;
   -webkit-border-top-right-radius: 20px;
   padding: 15px 30px;
+  text-align: center;
 }
 
 .slide header {
@@ -376,8 +377,8 @@ body.three-d div.slides {
 }
 
 .slide li {
-  padding: 10px 0;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .slide header:only-child h1 {
@@ -572,5 +573,69 @@ aside {
 .vg { color: #19177C } /* Name.Variable.Global */
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* @end */
+
+/* @group Topic specific layout */
+
+.slide .inner h3 {
+  text-align: center;
+  background-color: #2E3F53;
+  color: #E9DCB9;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.slide.title header {
+  text-align: center;
+  height: 50%;
+  font-size: 10em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.slide.title header h1 {
+  display: block;
+  top: 25%;
+  position: relative;
+}
+
+.slide.title section {
+  bottom: 0;
+  font-size: 4em;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50%;
+}
+
+.slide .inner ul ul li {
+  list-style-type: none;
+  border-left: 5px solid #2E3F53;
+  padding-left: 5px;
+}
+
+.slide.work_experience blockquote {
+  border-left: 5px solid #2e3f53;
+  padding-left: 5px;
+}
+
+.slide.work_experience p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.slide.work_experience em {
+  margin-right: 10px;
+  float: right;
+}
+
+.slide.work_experience strong {
+  margin-left: 10px;
+  display: block;
+}
 
 /* @end */
